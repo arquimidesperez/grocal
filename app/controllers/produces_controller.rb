@@ -1,5 +1,6 @@
 class ProducesController < ApplicationController
   before_action :set_produce, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /produces
   def index
@@ -10,12 +11,13 @@ class ProducesController < ApplicationController
 
   # GET /produces/1
   def show
-    render json: @produce
+    render json: @produce, include: :seasons
   end
 
   # POST /produces
   def create
     @produce = Produce.new(produce_params)
+    @produce.user = @current_user
 
     if @produce.save
       render json: @produce, status: :created
@@ -46,6 +48,6 @@ class ProducesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def produce_params
-      params.require(:produce).permit(:type, :variety, :img_url, :quantity, :price, :user_id)
+      params.require(:produce).permit(:type, :variety, :img_url, :quantity, :price)
     end
 end
