@@ -1,31 +1,59 @@
 # grocal
 
 ## Project Description
-*grocal* a portmanteau of 'grow local' is a full-stack development app that aims to empower communities to become more self-relient by creating a e-commerce platform geared towards small farmers seeking to sell their produce. This app is centered towards micro-entrepreneurs living in suburbs who are interested in the micro-agricultural space. 
+>*grocal* a portmanteau of 'grow local' is a full-stack development app that aims to empower communities to become more self-relient by creating a e-commerce platform geared towards small farmers seeking to sell their produce. This app is centered towards micro-entrepreneurs living in suburbs who are interested in the micro-agricultural space. 
 
-## Deployed Link
+- [MVP](#mvp)
+- [Goals](#goals)
+    - [Libraries and Dependencies](#libraries-and-dependencies)
+    - [Wireframes](#wireframes)
+    - [Component Tree](#component-tree)
+    - [ERD Model](#erd-model)
+    - [Project Schedule](#project-schedule)
+    - [Timeframes](#timeframes)
+- [Post-MVP](#post-mvp)
+- [Code Showcase](#code-showcase)
+- [Code Issues & Resolutions](#code-issues--resolutions)
 
-pending project completion
+<br>
 
-## Wireframes
-
-## Component Hierarchy
-
-## Schema
-
-pending project approval
-
-## MVP
+### MVP
 - Full CRUD
 - Listing produce for sale, Seasons view
 - 3 tables: Users, Crops, Seasons
 - Allow the users to enter how much of a given crop they have for sale
 
-## Post-MVP
-- Calculating average prices for a specific crop
-- Purchasing window
+### Goals
+Build out a full-stack app with full CRUD, expand abilities in working on Ruby on Rails and front-end React apps.
 
-## Project Schedule
+<br>
+
+#### Libraries and Dependencies
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|      React       | JavaScript framework for front-end development |
+|   React Router   | JavaScript package for adding functionality to app, BrowserReactor |
+
+<br>
+
+#### Wireframes
+<a href='https://www.figma.com/file/eVBHnbdho0O0FrirErYWKk/grocal?node-id=0%3A1' rel="nofollow" target='blank'>Figma Wireframe</a>
+
+<br>
+
+#### Component Tree
+
+<a href='https://whimsical.com/grocal-G97Wpuj6Xv6KfTbG9ZSPAP' rel="nofollow" target='blank'>Whimsical Component Tree</a>
+
+<br>
+
+#### ERD Model
+
+<a href='https://drive.google.com/file/d/1EADmlvf3jvoYQ6_2HFgJtknwz7l5eENC/view?usp=sharing' rel="nofollow" target='blank'>ERD Model</a>
+
+<br>
+
+#### Project Schedule
 
 | Day        | Deliverable                                                | Status     |
 | ----- | --------------------------------------------------------------- | ---------- |
@@ -35,7 +63,9 @@ pending project approval
 | 7/26  | CSS flexbox/grid |   |
 | 7/27  | CSS finishing touches -- testing and last minute fixes |   |
 
-## Timeframes
+<br>
+
+#### Timeframes
 
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
@@ -49,3 +79,17 @@ pending project approval
 | Front-end seasonal view    |   H   ||||
 | Front-end CSS     |   H   ||||
 | Front-end CSS 2   |   H   ||||
+
+<br>
+
+### Post-MVP
+- Calculating average prices for a specific crop
+- Purchasing window
+
+<br>
+
+### Code Showcase
+
+<br>
+
+### Code Issues & Resolutions
