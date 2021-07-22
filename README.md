@@ -70,15 +70,15 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
 | Basic MVP Design                     |    H     |      5hrs      |      5hrs     |     5hrs    |
-| Rails - tables, models, seed data    |   H   ||||
-| Rails - migrations    |   H   ||||
-| Front-end api-config    |   H   ||||
-| Front-end axios requests    |   H   ||||
-| Front-end log-in/register    |   H   ||||
-| Front-end produce view    |   H   ||||
-| Front-end seasonal view    |   H   ||||
-| Front-end CSS     |   H   ||||
-| Front-end CSS 2   |   H   ||||
+| Rails - tables, models, seed data    |   H   |4|||
+| Rails - migrations    |   H   |1|||
+| Front-end api-config    |   H   |2|||
+| Front-end axios requests    |   H   |2|||
+| Front-end log-in/register    |   H   |2|||
+| Front-end produce view    |   H   |1|||
+| Front-end seasonal view    |   H   |1|||
+| Front-end CSS     |   H   |3|||
+| Front-end CSS 2   |   H   |3|||
 
 <br>
 
