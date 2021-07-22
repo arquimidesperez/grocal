@@ -1,5 +1,5 @@
 class ProducesController < ApplicationController
-  before_action :set_produce, only: [:show, :update, :destroy]
+  before_action :set_produce, only: [:show, :update, :destroy, :add_season]
   before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET /produces
@@ -38,6 +38,14 @@ class ProducesController < ApplicationController
   # DELETE /produces/1
   def destroy
     @produce.destroy
+  end
+
+  def add_season
+    @season = Season.find(params[:season_id])
+    @produce.seasons.push(@season)
+
+    render json: @food, include: :seasons
+
   end
 
   private
