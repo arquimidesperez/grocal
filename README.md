@@ -49,7 +49,7 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 
 #### ERD Model
 
-<a href='https://drive.google.com/file/d/1EADmlvf3jvoYQ6_2HFgJtknwz7l5eENC/view?usp=sharing' rel="nofollow" target='blank'>ERD Model</a>
+<a href='https://drive.google.com/file/d/11n--amiR6rYcQT9z_-Kgp2VnnkwcQuYM/view?usp=sharing' rel="nofollow" target='blank'>ERD Model</a>
 
 <br>
 
