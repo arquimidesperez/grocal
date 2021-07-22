@@ -18,7 +18,7 @@ class ProducesController < ApplicationController
     @produce = Produce.new(produce_params)
 
     if @produce.save
-      render json: @produce, status: :created, location: @produce
+      render json: @produce, status: :created
     else
       render json: @produce.errors, status: :unprocessable_entity
     end
