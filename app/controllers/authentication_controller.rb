@@ -1,6 +1,9 @@
 class AuthenticationController < ApplicationController
   before_action :authorize_request, except: :login
 
+  # Took this code from the bcrypt auth lesson
+  # 
+
   # POST /auth/login
   def login
     @user = User.find_by(username: login_params[:username])

@@ -1,0 +1,13 @@
+h1{
+  color: white;
+  font-size: 3em;
+}
+
+.flex-layout{
+  display: flex;
+  flex-direction: row;
+  align-content:space-around;
+  flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
