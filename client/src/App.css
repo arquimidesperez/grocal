@@ -12,15 +12,26 @@ ids are the #
   padding: 5px;
 }
 
+.body-green-div{
+  margin-top: 30px;
+}
+
 hr{
   margin: 0px;
   border-top: 2px solid lightgray;
 }
 
-.link-font-change, h1, h2, h3, h4, h5, h6 p{
+.link-font-change, h1, h2, h3, h4, h5, h6, p{
   font-family: 'Reem Kufi', sans-serif;
   text-decoration: none;
   color: white;
+}
+
+.p{
+  font-family: 'Reem Kufi', sans-serif;
+  color: black;
+  font-size: .6em;
+  line-height: 1.5em;
 }
 
 label{
@@ -33,5 +44,11 @@ label{
   font-family: 'Reem Kufi', sans-serif;
   color: white;
   width: 50%;
-  margin: 10px 0px 0px 100px;
+  margin: 0;
+
+}
+
+.screen-width-div{
+  width: 90%;
+  margin: 10px auto;
 }
