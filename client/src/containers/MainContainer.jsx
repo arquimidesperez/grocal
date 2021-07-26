@@ -1,18 +1,19 @@
-import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+// import React from 'react'
+// import { Route, Switch, useHistory } from 'react-router-dom';
+// import Produce from '../screens/Produce';
 
-
-import React from 'react'
-
-export default function MainContainer() {
-  return (
-    <Switch>
-      <Route>
-        
-      </Route>
-      <Route>
-
-      </Route>
-    </Switch>
-  )
-}
+// export default function MainContainer() {
+//   return (
+//     <div>
+//     <Switch>
+//       <Route path='/produces'>
+//         <Produce />
+//       </Route>
+//       <Route path='/seasonal'>
+//         <Seasonal />
+//       </Route>
+//       <Route path=''></Route>
+//     </Switch>  
+//     </div>
+//   )
+// }

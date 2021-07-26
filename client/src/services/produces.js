@@ -25,3 +25,8 @@ export const deleteProduce = async (id) => {
   const resp = await api.delete(`/produces/${id}`);
   return resp;
 }
+
+export const addSeason = async (seasonId, produceId) => {
+	const resp = await api.put(`/seasons/${seasonId}/produces/${produceId}`);
+	return resp.data;
+};
