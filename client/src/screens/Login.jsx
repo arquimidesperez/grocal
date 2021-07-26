@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import '../assets/css/Login.css'
+import Flower from '../assets/images/Flowers.png';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -13,19 +14,21 @@ export default function Login(props) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }))
   }
 
   return (
-    <div>
+    <div class='screen-width-div'>
       <form onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}>
-      <h3>Welcome back</h3>
+      <div class='green-div body-green-div'>
+        <h3>Welcome back</h3>          
+      </div>
       <label>
         username
         <br/>
@@ -47,13 +50,19 @@ export default function Login(props) {
           value={password}
           onChange={handleChange}
           class='input-mobile'
-        />
-      </label>
+          />
+        </label>
+        <br/>
+        <br/>
       <div class='green-div'>
-      <Link to='/register' class='link-font-change'>Register</Link>
+        <Link to='/register' class='link-font-change'>Register</Link>
       </div>
+        <br />
       <button class='green-button'>Submit</button>
       </form>
+      <img src={Flower}
+        alt='Man looks at his flowers'
+        class='flowers'/>
     </div>
   )
 }

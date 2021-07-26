@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../assets/css/Layout.css'
 
 export default function Layout(props) {
-  const { currentUser } = props;
+  const { currentUser} = props;
   
   return (
     <div>
@@ -28,8 +28,8 @@ export default function Layout(props) {
             )}
             {currentUser && (
               <nav>
-                <Link to='/produce'>Produce</Link>
-                <Link to='/seasonal'>Seasonal</Link>
+                <Link to='/produces'>Produce</Link>
+                <Link to='/seasons'>Seasonal</Link>
               </nav> 
             )}
           </div>

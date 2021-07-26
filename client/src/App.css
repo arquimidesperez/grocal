@@ -30,7 +30,7 @@ hr{
 .p{
   font-family: 'Reem Kufi', sans-serif;
   color: black;
-  font-size: .6em;
+  font-size: .8em;
   line-height: 1.5em;
 }
 
@@ -51,4 +51,9 @@ label{
 .screen-width-div{
   width: 90%;
   margin: 10px auto;
+}
+
+.input-mobile{
+  background-color: lightgray;
+  border: none;
 }
