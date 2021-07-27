@@ -1,34 +1,39 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
-import {getOneProduce, addSeason} from '../services/produces'
+import { Link, useParams } from 'react-router-dom';
+import {getOneProduce} from '../services/produces'
 
 export default function ProduceDetails(props) {
-  // const { seasonsList, produceList } = props;
-  return null;
+  const { handleDelete, seasonsList } = props;
 
-  // const [produce, setProduce] = useState(null);
-	// const [season, setSeason] = useState('');
-	// const { id } = useParams();
-	// const { seasonsList } = props;
+  const [produce, setProduce] = useState(null);
+	const { id } = useParams();
 
-	// useEffect(() => {
-	// 	const fetchProduceItem = async () => {
-	// 		const produceData = await getOneProduce(id);
-	// 		setProduce(produceData);
-	// 	};
-	// 	fetchProduceItem();
-	// }, []);
-
-  // const handleChange = (e) => {
-	// 	const { value } = e.target;
-	// 	setSeason(value);
-	// };
+	useEffect(() => {
+		const fetchProduceItem = async () => {
+			const produceData = await getOneProduce(id);
+      setProduce(produceData);
+      console.log(produceData)
+      console.log(produceData.name)
+		};
+		fetchProduceItem();
+  }, [id]);
   
-  // return (
-  //   <div class='screen-width-div'>
-  //     <p>This is the produce details</p>
+  // console.log(produce?.seasons[0].name)
 
+  
+  return (
+    <div className='screen-width-div'>
+      <p>This is the produce details</p>
+      <p>type: {produce?.produce_type}</p>
+      <p>name: {produce?.name}</p>
+      <p>variety: {produce?.variety}</p>
+      <p>quantity: {produce?.quantity}</p>
+      <p>price: ${produce?.price} /per</p>
+      {/* <p>season: {produce?.seasons[0].name}</p> */}
 
-  //   </div>
-  // )
+      <Link to={`/produces/${produce?.id}/edit`}><button>Edit</button></Link>
+      <button onClick={() => handleDelete(produce.id)}>Delete</button>
+
+    </div>
+  )
 }

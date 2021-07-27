@@ -4,49 +4,48 @@ import '../assets/css/Layout.css'
 
 export default function Layout(props) {
   const { currentUser, handleLogout} = props;
-  return null;
-  // return (
-  //   <div>
-  //     <header>
-  //       <div class='green-div flex-layout'>
+  return (
+    <div>
+      <header>
+        <div className='green-div flex-layout'>
 
-  //         <div class='flex-layout-grocal'>
-  //           <h1><Link to='/' class='link-font-change'>grocal</Link></h1>
+          <div className='flex-layout-grocal'>
+            <h1><Link to='/' className='link-font-change'>grocal</Link></h1>
 
-  //               {currentUser ? (
-  //               <div>
-  //               <p>{currentUser.username}</p>
-  //               <button onClick={handleLogout}  class='green-button'>Logout</button>
-  //               </div>
-  //               ) : (
-  //               <div>
-  //               <div class='flex-layout'>
-  //               <Link to='/login' class='link-font-change'>login</Link>            
-  //               </div>
-  //               <div class='flex-layout'>
-  //               <Link to='/register' class='link-font-change'>register</Link>
-  //               </div>
-  //               </div>
-  //               )}
+                {currentUser ? (
+                <div>
+                <p>{currentUser.username}</p>
+                <button onClick={handleLogout}  className='green-button'>Logout</button>
+                </div>
+                ) : (
+                <div>
+                <div className='flex-layout'>
+                <Link to='/login' className='link-font-change'>login</Link>            
+                </div>
+                <div className='flex-layout'>
+                <Link to='/register' className='link-font-change'>register</Link>
+                </div>
+                </div>
+                )}
 
-  //           {currentUser && (
-  //             <nav>
-  //               <Link to='/produces' class='link-font-change'>produce</Link>
-  //               <br/>
-  //               <Link to='/seasons' class='link-font-change'>seasonal</Link>
-  //               <br/>
-  //               <Link to='/produces/new' class='link-font-change'>produces</Link>
-  //             </nav> 
-  //           )}
+            {currentUser && (
+              <nav>
+                <Link to='/produces' className='link-font-change'>produce</Link>
+                <br/>
+                <Link to='/seasons' className='link-font-change'>seasonal</Link>
+                <br/>
+                <Link to='/produces/new' className='link-font-change'>create</Link>
+              </nav> 
+            )}
 
-  //         </div>
+          </div>
 
-  //       </div>
+        </div>
 
-  //       <hr />
+        <hr />
         
-  //     </header>
-  //     {props.children}
-  //   </div>
-  // )
+      </header>
+      {props.children}
+    </div>
+  )
 }
