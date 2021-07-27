@@ -6,12 +6,13 @@ import Login from './screens/Login';
 import Register from './screens/Register';
 import Produce from './screens/Produce';
 import ProduceCreate from './screens/ProduceCreate';
-import ProduceDetail from './screens/ProduceDetails';
 import Seasonal from './screens/Seasonal';
 import { loginUser, registerUser, verifyUser, removeToken } from './services/auth';
 import Homepage from './screens/Homepage';
 import {deleteProduce, getAllProduces, postProduce, putProduce} from './services/produces';
 import {getAllSeasons} from './services/seasons';
+import ProduceEdit from './screens/ProduceEdit';
+import ProduceDetails from './screens/ProduceDetails';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -28,13 +29,13 @@ function App() {
   const handleLogin = async(formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/produces');
   }
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/produces');
   }
 
   const handleLogout = () => {
@@ -79,31 +80,49 @@ function App() {
 
 	const handleDelete = async (id) => {
 		await deleteProduce(id);
-		setProduceList((prevState) => prevState.filter((produce) => produce.id !== id));
+    setProduceList((prevState) => prevState.filter((produce) => produce.id !== id));
+    history.push('/produces');
 	};
 
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser} handleLogout={handleLogout}>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}>
         <Switch>
           <Route path='/login'>
-            <Login handleLogin={handleLogin}/>
+            <Login
+              handleLogin={handleLogin} />
           </Route>
           <Route path='/register'>
-            <Register handleRegister={handleRegister}/>
+            <Register
+              handleRegister={handleRegister} />
           </Route>
           <Route path='/seasons'>
-            <Seasonal seasonsList={seasonsList}/>
+            <Seasonal
+              seasonsList={seasonsList} />
           </Route>
           <Route path='/produces/new'>
-            <ProduceCreate handleCreate={handleCreate}/>
+            <ProduceCreate
+              seasonsList={seasonsList}
+              handleCreate={handleCreate} />
+          </Route>
+          <Route path='/produces/:id/edit'>
+            <ProduceEdit
+              seasonsList={seasonsList}
+              produceList={produceList}
+              handleUpdate={handleUpdate} />
           </Route>
           <Route path='/produces/:id'>
-            <ProduceDetail seasonsList={seasonsList} produceList={produceList}/>
+            <ProduceDetails
+              seasonsList={seasonsList}
+              produceList={produceList}
+              handleDelete={handleDelete} />
           </Route>
           <Route path='/produces'>
-            <Produce produceList={produceList}/>
+            <Produce
+              produceList={produceList} />
           </Route>
           <Route path='/'>
             <Homepage />
