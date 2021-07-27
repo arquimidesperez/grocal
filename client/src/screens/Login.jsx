@@ -23,14 +23,19 @@ export default function Login(props) {
 
   return (
     <div className='screen-width-div'>
+
       <form onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}>
-      <div className='green-div body-green-div'>
-        <h3>Welcome back</h3>          
-      </div>
-      <label>
+
+      <div className='green-div'>
+        <h3 className='w-text center-content'>welcome back</h3>          
+        </div>
+
+        <br />
+      
+        <label>
         username
         <br/>
         <input
@@ -40,8 +45,11 @@ export default function Login(props) {
           onChange={handleChange}
           className='input-mobile'
         />
-      </label>
-      <br/>
+        </label>
+        
+        <br />
+        <br />
+        
       <label>
         password
         <br/>
@@ -53,14 +61,16 @@ export default function Login(props) {
           className='input-mobile'
           />
         </label>
+
         <br/>
         <br/>
       <div className='green-div'>
-        <Link to='/register' className='link-font-change'>Register</Link>
+        <Link to='/register' className='w-text link-font-change login-center'>first time? register here</Link>
       </div>
         <br />
-      <button className='green-button'>Submit</button>
+      <button className='green-button make-larger'>Submit</button>
       </form>
+
       <img src={Flower}
         alt='Man looks at his flowers'
         className='flowers'/>

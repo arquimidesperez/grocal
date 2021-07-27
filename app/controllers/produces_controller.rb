@@ -16,8 +16,9 @@ class ProducesController < ApplicationController
 
   # POST /produces
   def create
-    @produce = Produce.new(produce_params)
-    @produce.seasons=Season.find(params[:season_id])
+    @produce = Produce.new(produce_params.except(:season_id))
+    @season = Season.find(produce_params[:season_id])
+    @produce.seasons.push(@season)
     @produce.user = @current_user
 
     if @produce.save
@@ -29,10 +30,9 @@ class ProducesController < ApplicationController
 
   # PATCH/PUT /produces/1
   def update
-    @season=Season.find(produce_params[:season])
-    @produce.seasons << @season
-
-    if @produce.update(produce_params.except(:season))
+    if @produce.update(produce_params.except(:season_id))
+      @season=Season.find(produce_params[:season_id])
+      @produce.seasons << @season
       render json: @produce, include: :seasons
     else
       render json: @produce.errors, status: :unprocessable_entity
@@ -60,6 +60,6 @@ class ProducesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def produce_params
-      params.require(:produce).permit(:produce_type, :name, :variety, :img_url, :quantity, :price, :season)
+      params.require(:produce).permit(:produce_type, :name, :variety, :img_url, :quantity, :price, :season_id)
     end
 end

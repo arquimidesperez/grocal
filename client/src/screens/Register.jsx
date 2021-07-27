@@ -23,15 +23,20 @@ export default function Register(props) {
 
   return (
     <div className='screen-width-div'>
+
       <form onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);
       }}>
-      <div className='green-div'>
-      <h3>get your grocal started!</h3>
+
+      <div className='green-div center-content'>
+      <h3 className='w-text'>get your grocal started!</h3>
       </div>
+        
+      <br />
+
       <label>
-        username:
+        username
         <br/>
         <input
           type='text'
@@ -40,10 +45,13 @@ export default function Register(props) {
           onChange={handleChange}
           className='input-mobile'
         />
-      </label>
-      <br/>
+        </label>
+        
+        <br />
+        <br />
+        
       <label>
-        email:
+        email
         <br/>
         <input
           type='text'
@@ -52,10 +60,13 @@ export default function Register(props) {
           onChange={handleChange}
           className='input-mobile'
         />
-      </label>
-      <br/>
+        </label>
+        
+        <br />
+        <br />
+
       <label>
-        password:
+        password
         <br/>
         <input
           type='password'
@@ -65,13 +76,17 @@ export default function Register(props) {
           className='input-mobile'
         />
         </label>
+
         <br />
         <br />
-      <button className='green-button'>Submit</button>
+
+      <button className='green-button make-larger'>Submit</button>
       </form>
+
       <img src={workFromHome}
         alt='Man looks at his flowers'
-        className='work-from-home'/>
+        className='work-from-home' />
+      
     </div>
   )
 }

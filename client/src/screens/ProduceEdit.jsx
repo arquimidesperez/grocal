@@ -13,7 +13,8 @@ export default function ProduceEdit(props) {
 	});
   const { produce_type, name, variety, img_url, quantity, price } = produceFormData;
 	const { produceList, handleUpdate, seasonsList } = props;
-	const { id } = useParams();
+  const [seasonId, setSeasonId] = useState()
+  const { id } = useParams();
 
 	useEffect(() => {
 		const prefillFormData = () => {
@@ -29,7 +30,8 @@ export default function ProduceEdit(props) {
 		};
 		if (produceList.length) {
 			prefillFormData();
-		}
+    }
+    // eslint-disable-next-line
 	}, [produceList]);
 
 	const handleChange = (e) => {
@@ -41,87 +43,108 @@ export default function ProduceEdit(props) {
 	};
 
   return (
-    <div>
+    <div className='screen-width-div'>
+
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          handleUpdate(id, produceFormData);
+          handleUpdate(id, {...produceFormData, season_id: seasonId});
         }}
-        >
-        <h3>Edit Food</h3>
+      >
+        
+        <div className='green-div'>
+        <h3 className='w-text big-text'>edit</h3>
+        </div>
+        <br />
         <label>
-          produce type:
+          produce type
           <br/>
           <input
             type='text'
             name='produce_type'
             value={produce_type}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br />
+        <br />
         <label>
-          name:
+          name
           <br/>
           <input
             type='text'
             name='name'
             value={name}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br />
+        <br />
         <label>
-          variety:
+          variety
           <br/>
           <input
             type='text'
             name='variety'
             value={variety}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br />
+        <br />
         <label>
-          image url:
+          image url
           <br/>
           <input
             type='text'
             name='img_url'
             value={img_url}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br />
+        <br />
         <label>
-          quantity:
+          quantity
           <br/>
           <input
             type='text'
             name='quantity'
             value={quantity}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br />
+        <br />
         <label>
-          price:
+          price
           <br/>
           <input
             type='text'
             name='price'
             value={price}
+            className='input-mobile'
             onChange={handleChange} />
         </label>
         <br/>
+        <br/>
         <select
-          onChange={handleChange}
+          onChange={(e)=>setSeasonId(e.target.value)}
           defaultValue='default'
+          className='selector-mobile'
           name='season'>
+          {/* value={season.name} */}
 					<option disabled value='default'>
-						-- Select a Season --
+						- Select a Season -
 					</option>
           {seasonsList.map((season, idx) => (
             <option key={idx} value={season.id}>{season.name}</option>
           ))}
           </select>
         <br />
-        <button>Submit</button>
+        <br/>
+        <button className='green-button make-larger'>Submit</button>
+        <br/>
       </form>
     </div>
   )
