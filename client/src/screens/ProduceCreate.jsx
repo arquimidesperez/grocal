@@ -8,7 +8,7 @@ export default function ProduceCreate(props) {
 		variety: '',
 		img_url: '',
 		quantity: '',
-		price: '',
+    price: '',
   });
   const [seasonId, setSeasonId] = useState()
 
@@ -28,80 +28,110 @@ export default function ProduceCreate(props) {
 
   return (
     <div className='screen-width-div'>
+
       <form onSubmit={(e)=>{
         e.preventDefault();
-        handleCreate(produceFormData);
-        }}>
+        handleCreate({...produceFormData, season_id: seasonId});
+      }}>
+        
+        <div className='green-div'>
+        <h3 className='w-text big-text'>create</h3>
+        </div>
+        <br/>
           <label>
-          type:
+          produce type
           <br/>
           <input
             type='text'
             name='produce_type'
             value={produce_type}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
-          <br/>
+        <br />
+        <br/>
           <label>
-          name:
+          name
           <br/>
           <input
             type='text'
             name='name'
             value={name}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
-          <br/>
+        <br />
+        <br/>
           <label>
-          variety:
+          variety
           <br/>
           <input
             type='text'
             name='variety'
             value={variety}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
-          <br/>
+        <br />
+        <br/>
           <label>
-          image url (optional):
+          image url (optional)
           <br/>
           <input
             type='text'
             name='img_url'
             value={img_url}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
-          <br/>
+        <br />
+        <br/>
           <label>
-          quantity:
+          quantity
           <br/>
           <input
             type='text'
             name='quantity'
             value={quantity}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
-          <br/>
+        <br />
+        <br/>
           <label>
-          price (per unit):
+          price (per unit)
           <br/>
           <input
             type='text'
             name='price'
             value={price}
+            className='input-mobile'
+            required
             onChange={handleChange} />
           </label>
         <br />
-        <select onChange={(e)=>setSeasonId(e.target.value)} defaultValue='default'>
+        <br/>
+        <select
+          onChange={(e) => setSeasonId(e.target.value)}
+          defaultValue='default'
+          className='selector-mobile'
+          required
+          >
 					<option disabled value='default'>
-						-- Select a Season --
+						- Select a Season -
 					</option>
           {seasonsList.map((season) => (
             <option value={season.id}>{season.name}</option>
           ))}
           </select>
-          <br/>
-        <button>Submit</button>
+        <br />
+        <br/>
+        <button className='green-button make-larger'>Submit</button>
       </form>
       
     </div>

@@ -1,10 +1,13 @@
 import React from 'react'
 
-export default function Seasonal() {
+export default function Seasonal(props) {
+  const { seasonsList } = props;
 
   return (
-    <div>
+    <div  className='screen-width-div'>
       <p className='p'>Seasonal</p>
+
+
     </div>
   )
 }

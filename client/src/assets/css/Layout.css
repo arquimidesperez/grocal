@@ -1,14 +1,61 @@
-h1{
+.title{
   color: white;
-  font-size: 3em;
+  font-size: 2.5em;
+  line-height: 1.5em;
 }
 
-.flex-layout{
+.flexer{
+  border: 1px black solid;
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+  display: flex;
+  padding: 15px;
+}
+
+.title-holder{
+  width: 30;
+  margin-right: 10px;
+}
+
+.link-holder{
+  width: 60%;
+  margin-left: 10px;
+}
+
+.layout-text-size{
+  font-size: 1.2em;
+}
+
+.top-level{
   display: flex;
   flex-direction: row;
-  align-content:space-around;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: 1px black solid;
+  justify-content: space-evenly;
+  margin: 10px auto;
 }
+
+.bottom-level{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: -10px 0px 10px 0px;
+}
+
+.user{
+  align-self: center;
+}
+
+.logout{
+  align-self: center;
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+    
+
+
+  }

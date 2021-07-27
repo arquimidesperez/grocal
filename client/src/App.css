@@ -2,34 +2,59 @@
   text-align: left;
 }
 
-.green-div{
-  background-color: #27CE37;
-  padding: 5px;
-}
-
-.body-green-div{
-  margin-top: 30px;
-}
-
-hr{
-  margin: 0px;
-  border-top: 2px solid lightgray;
-}
-
-.link-font-change, h1, h2, h3, h4, h5, h6, p{
+.link-font-change, h1, h2, h3, h4, h5, h6, p, label{
   font-family: 'Reem Kufi', sans-serif;
   text-decoration: none;
 }
 
-.p{
-  font-family: 'Reem Kufi', sans-serif;
-  color: black;
-  font-size: .8em;
-  line-height: 1.5em;
+.screen-width-div{
+  width: 90%;
+  margin: 10px auto;
 }
 
-label{
-  font-family: 'Reem Kufi', sans-serif;
+.green-div{
+  background-color: #27CE37;
+  padding: 10px;
+}
+
+.green-div-margin{
+  margin-top: 30px;
+}
+
+.fit-link{
+  width: fit-content;
+}
+
+.w-text{
+  color: white;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.b-text{
+  color: black;
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
+.big-text{
+  font-size: 2em;
+}
+
+
+.center-container{
+  text-align: center;
+  margin: 10px auto;
+}
+
+.center-content{
+  text-align: center;
+}
+
+
+hr{
+  margin: 0px;
+  border-top: 2px solid lightgray;
 }
 
 .green-button{
@@ -39,15 +64,23 @@ label{
   color: white;
   width: 50%;
   margin: 0;
-
-}
-
-.screen-width-div{
-  width: 90%;
-  margin: 10px auto;
+  padding: 5px;
+  font-size: 1.2em;
 }
 
 .input-mobile{
   background-color: lightgray;
   border: none;
+  width: 50%;
+  font-size: 1em;
+  padding: 4px;
+  color: #000;
+}
+
+.selector-mobile{
+  background-color: lightgray;
+  font-size: 1em;
+  border: none;
+  width: 52%;
+  padding: 4px;
 }

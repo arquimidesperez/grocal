@@ -1,3 +1,13 @@
 .flowers{
   width: 90%;
+  margin: 0px auto;
+}
+
+.make-larger{
+  width: 100%;
+  margin: 0px auto;
+}
+
+.login-center{
+  margin-left: 90px;
 }
