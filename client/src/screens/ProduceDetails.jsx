@@ -29,7 +29,11 @@ export default function ProduceDetails(props) {
       <p>variety: {produce?.variety}</p>
       <p>quantity: {produce?.quantity}</p>
       <p>price: ${produce?.price} /per</p>
-      {/* <p>season: {produce?.seasons[0].name}</p> */}
+
+      <p>season: {produce?.seasons[0].name}</p>
+      <p>season: {produce?.seasons[1].name}</p>
+      <p>season: {produce?.seasons[2].name}</p>
+      <p>season: {produce?.seasons[3].name}</p>
 
       <Link to={`/produces/${produce?.id}/edit`}><button>Edit</button></Link>
       <button onClick={() => handleDelete(produce.id)}>Delete</button>
