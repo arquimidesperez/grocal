@@ -8,6 +8,30 @@
   margin: 0px auto;
 }
 
-.login-center{
-  margin-left: 90px;
+.login-container{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+@media screen 
+  and (min-device-width: 700px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+
+  .login-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .login-image-container{
+    width: 50%;
+  }
+
+  .login-form-container{
+    margin-top: 10vh;
+    width: 50%;
+  }
+
 }

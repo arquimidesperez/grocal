@@ -1,7 +1,20 @@
 .seasonal-selector{
   background-color: lightgray;
-  font-size: 1em;
+  font-size: .9em;
   border: none;
-  width: 90%;
-  padding: 4px;
+  width: 100%;
+  padding: 3px;
+
+}
+
+@media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+  .seasonal-selector{
+    background-color: lightgray;
+    font-size: 1.3em;
+    border: none;
+    width: 100%;
+    padding: 10px;
+  
+  }
 }

@@ -1,24 +1,20 @@
-.details-image-container {
+.create-image-container {
   display: none;
 }
 
 
 @media screen and (min-device-width: 700px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
-  .details-container {
+  .create-container {
     display: flex;
   }
-
-  .onlineShopping{
-    object-fit: contain;
-  }
   
-  .details-form-container {
+  .create-form-container {
     margin-top: 5vh;
     width: 55%;
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
 
-  .details-image-container {
+  .create-image-container {
     display: block;
     width: 45%;
   }

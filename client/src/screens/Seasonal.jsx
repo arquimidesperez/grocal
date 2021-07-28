@@ -1,30 +1,43 @@
 import React from 'react'
 import { useState } from 'react'
 import '../assets/css/Seasonal.css'
+import Produce from './Produce.jsx';
 
 export default function Seasonal(props) {
   const { seasonsList } = props;
-  const [seasonId, setSeasonId] = useState()
 
-  
+  console.log(seasonsList);
+
+  const [produceList, setProduceList] = useState([]);
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    console.log('this is value' + value);
+    const season = seasonsList.find((season) => season.id === +value);
+    console.log('this is season list' + seasonsList[0].id)
+    console.log('this is season' + season.produces);
+    season && setProduceList(season.produces)
+  }
 
   return (
-    <div  className='screen-width-div'>
-      <p className='b-text'>View Produce by Seasons</p>
+    <div className='screen-width-div'>
+      <div className='green-div'>
+        <p className='w-text'>seasonal availability</p>
+      </div>
       <br/>
       <select
-          onChange={(e)=>setSeasonId(e.target.value)}
+          onChange={handleChange}
           defaultValue='default'
           className='seasonal-selector'
           name='season'>
-          {/* value={season.name} */}
 					<option disabled value='default'>
 						- Select a Season -
 					</option>
           {seasonsList.map((season, idx) => (
             <option key={idx} value={season.id}>{season.name}</option>
           ))}
-          </select>
+      </select>
+      <Produce produceList={produceList}/>
 
 
     </div>
