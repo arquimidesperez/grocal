@@ -19,7 +19,7 @@
 }
 
 .link-holder{
-  width: 60%;
+  width: 90%;
   margin-left: 10px;
 }
 
@@ -43,6 +43,7 @@
 
 .align-resize{
   align-self: center;
+  text-align: left;
 }
 
 
@@ -52,7 +53,11 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 
-
-
+    .title{
+      color: white;
+      font-size: 3.5em;
+      line-height: 1.5em;
+      margin-left: 20px;
+    }
 
   }

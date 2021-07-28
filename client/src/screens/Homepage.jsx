@@ -26,11 +26,11 @@ export default function Homepage() {
           <div className="text-container">
 
             <p className="b-text marg-up">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. 
+              Microentrepreneurs with a passion for agriculture can take
+              advantage of their small growing area to make some extra
+              income on the side. Utilize your backyard, front-yard,
+              growing pots or even become a micro-greens farmer right in
+              the comfort of your own home. 
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function Homepage() {
 
       <div className="green-div green-div-margin">
         <p className="w-text">
-          do you have a passion for agriculture or micro-entrepreneurship?
+        make money from home and take part in a sustainability revolution
         </p>
       </div>
 
@@ -56,12 +56,9 @@ export default function Homepage() {
 
           <div className="text-container">
             <p className="b-text marg-up">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              nibh nunc. 
+              Make money from the comfort of your own home while being part of
+              a sustainability revolution addressing the needs of your own community
+              to end food deserts and make fresh produce accesible to everyone.
             </p>
           </div>
         </div>
