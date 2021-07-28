@@ -107,7 +107,9 @@ function App() {
             <Register handleRegister={handleRegister} />
           </Route>
           <Route path="/seasons">
-            <Seasonal seasonsList={seasonsList} />
+            <Seasonal
+              seasonsList={seasonsList}
+              produceList={produceList}/>
           </Route>
           <Route path="/produces/new">
             <ProduceCreate

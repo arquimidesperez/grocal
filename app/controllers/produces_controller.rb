@@ -32,7 +32,10 @@ class ProducesController < ApplicationController
   def update
     if @produce.update(produce_params.except(:season_id))
       @season=Season.find(produce_params[:season_id])
-      @produce.seasons << @season
+      
+      if @produce.seasons.exclude?(@season)
+        @produce.seasons << @season
+      end
       render json: @produce, include: :seasons
     else
       render json: @produce.errors, status: :unprocessable_entity
@@ -44,13 +47,13 @@ class ProducesController < ApplicationController
     @produce.destroy
   end
 
-  def add_season
-    @season = Season.find(params[:season_id])
-    @produce.seasons.push(@season)
+  # def add_season
+  #   @season = Season.find(params[:season_id])
+  #   @produce.seasons.push(@season)
 
-    render json: @food, include: :seasons
+  #   render json: @food, include: :seasons
 
-  end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

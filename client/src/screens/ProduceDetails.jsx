@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getOneProduce } from "../services/produces";
 import '../assets/css/ProduceDetails.css'
+import onlineShopping from "../assets/images/Online-shopping.png";
 
 export default function ProduceDetails(props) {
   const { handleDelete } = props;
@@ -13,29 +14,31 @@ export default function ProduceDetails(props) {
     const fetchProduceItem = async () => {
       const produceData = await getOneProduce(id);
       setProduce(produceData);
-      console.log(produceData);
-      console.log(produceData.name);
     };
     fetchProduceItem();
   }, [id]);
 
-  console.log(produce?.seasons);
-  var A = produce?.seasons;
-  console.log(A?.[0].name);
-  console.log(A?.length);
-  // let i = 0;
-  // while (i < A.length) {
-  //   console.log(A?.[i].name)
-  //   i++;
-  // }
+  const allSeasons = produce?.seasons;
+
+  const produceSeasonArr = [];
+
+  for (let i = 0; i < allSeasons?.length; i++){
+    produceSeasonArr.push(produce?.seasons[i].name)
+  }
+
+  console.log(produceSeasonArr);
+  const set = new Set(produceSeasonArr)
+  const myArr = Array.from(set)
 
   return (
     <div className="screen-width-div">
 
-      <div className='green-div'>
+
+<div className='green-div'>
         <p className='w-text big-text'>details</p>
       </div>
-      <br/>
+      <div className='details-container'>
+        <div className='details-form-container'>
       <p>type: {produce?.produce_type}</p>
       <br/>
       <p>name: {produce?.name}</p>
@@ -45,12 +48,10 @@ export default function ProduceDetails(props) {
       <p>quantity: {produce?.quantity}</p>
       <br/>
       <p>price: ${produce?.price} /per</p>
-      <br/>
-
-      {/* <p>season: {produce?.seasons[0].name}</p>
-      <p>season: {produce?.seasons[1].name}</p>
-      <p>season: {produce?.seasons[2].name}</p> */}
-
+      <br />
+      <p>available seasons: {myArr}</p>
+      <br />
+      
       <Link to={`/produces/${produce?.id}/edit`}>        
         <button className='green-button'>Edit</button>
       </Link>
@@ -58,8 +59,17 @@ export default function ProduceDetails(props) {
       <br/>
       <button className='green-button' onClick={() => handleDelete(produce.id)}>Delete</button>
 
+        </div>
 
-      
+        <div className='details-image-container'>
+        <img
+              src={onlineShopping}
+              alt="online shopping"
+              className="flowers"
+            />
+        </div>
+      </div>
+
     </div>
   );
 }

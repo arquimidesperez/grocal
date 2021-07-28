@@ -3,7 +3,7 @@
 }
 
 @media screen 
-  and (min-device-width: 1200px) 
+  and (min-device-width: 700px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
@@ -13,13 +13,13 @@
   }
 
   .image-and-content{
-    height: 50vh;
+    height: fit-content;
     display:flex;
     flex-direction: row-reverse;
   }
 
   .image-and-content-2{
-    height: 50vh;
+    height: fit-content;
     display:flex;
     flex-direction: row;
   }
@@ -32,7 +32,16 @@
     width: 50%;
   }
   .text-container{
-    width: 40%;
+    width: 50%;
+    align-content: center; 
+  }
+
+  .marg-up{
+    margin-top: 40px;
+  }
+
+  .bottom-div-spacer{
+    margin-bottom: 100px;
   }
 
 }

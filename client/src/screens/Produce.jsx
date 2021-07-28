@@ -4,11 +4,12 @@ import "../assets/css/Produce.css";
 
 export default function Produce(props) {
   const { produceList } = props;
+  
 
   return (
     <div className="screen-width-div">
-      {produceList.map((produce) => (
-        <div key={produce.id}>
+      {produceList?.map((produce, idx) => (
+        <div key={idx}>
           <div className="produces-container">
             <Link className="link-font-change" to={`/produces/${produce.id}`}>
               <div>
@@ -21,7 +22,6 @@ export default function Produce(props) {
           </div>
         </div>
       ))}
-      {/* <Link to={`/produces/${produce.id}/edit`}><button>Edit</button></Link> */}
     </div>
   );
 }

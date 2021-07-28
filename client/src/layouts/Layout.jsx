@@ -18,14 +18,14 @@ export default function Layout(props) {
             <div>
               {currentUser ? (
                 <div className="top-level">
-                  <div className="user">
+                  <div className="align-resize">
                     <p className="w-text make-smaller-welcome layout-text-size">
                       {" "}
                       Welcome {currentUser.username}
                     </p>
                   </div>
 
-                  <div className="logout">
+                  <div className="align-resize">
                     <button
                       onClick={handleLogout}
                       className="green-button w-text layout-text-size"
@@ -37,7 +37,7 @@ export default function Layout(props) {
                 </div>
               ) : (
                 <div className="top-level">
-                  <div className="flex-layout">
+                  <div className="flex-layout align-resize">
                     <Link
                       to="/login"
                       className="link-font-change w-text fit-link layout-text-size"
@@ -46,7 +46,7 @@ export default function Layout(props) {
                     </Link>
                   </div>
 
-                  <div className="flex-layout">
+                  <div className="flex-layout align-resize">
                     <Link
                       to="/register"
                       className="link-font-change w-text fit-link layout-text-size"
@@ -61,24 +61,18 @@ export default function Layout(props) {
             <div className="link-holder-bottom">
               {currentUser && (
                 <nav className="bottom-level">
-                  <Link
-                    to="/produces"
-                    className="link-font-change w-text layout-text-size"
-                  >
+                  <Link to="/produces"
+                    className="link-font-change w-text layout-text-size">
                     produce
                   </Link>
                   <br />
-                  <Link
-                    to="/seasons"
-                    className="link-font-change w-text layout-text-size"
-                  >
+                  <Link to="/seasons"
+                    className="link-font-change w-text layout-text-size">
                     seasonal
                   </Link>
                   <br />
-                  <Link
-                    to="/produces/new"
-                    className="link-font-change w-text layout-text-size"
-                  >
+                  <Link to="/produces/new"
+                    className="link-font-change w-text layout-text-size">
                     create
                   </Link>
                 </nav>
