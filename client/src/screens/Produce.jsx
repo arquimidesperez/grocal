@@ -17,7 +17,7 @@ export default function Produce(props) {
               </div>
               <p className="b-text"> Price ${produce.price}</p>
               <p className="b-text"> Quantity: {produce.quantity}</p>
-              <p className="b-text"> Total: ${produce.quantity * produce.price}</p>
+              <p className="b-text"> Total: ${(Math.round(produce.quantity * produce.price * 100) / 100).toFixed(2)}</p>
             </Link>
           </div>
         </div>

@@ -93,7 +93,6 @@ export default function ProduceCreate(props) {
             name="img_url"
             value={img_url}
             className="input-mobile"
-            required
             onChange={handleChange}
           />
         </label>
@@ -136,8 +135,8 @@ export default function ProduceCreate(props) {
           <option disabled value="default">
             - Select a Season -
           </option>
-          {seasonsList.map((season) => (
-            <option value={season.id}>{season.name}</option>
+          {seasonsList.map((season, idx) => (
+            <option key={idx} value={season.id}>{season.name}</option>
           ))}
         </select>
         <br />
