@@ -3,6 +3,9 @@
 ## Project Description
 >*grocal* a portmanteau of 'grow local' is a full-stack development app that aims to empower communities to become more self-relient by creating a e-commerce platform geared towards small farmers seeking to sell their produce. This app is centered towards micro-entrepreneurs living in suburbs who are interested in the micro-agricultural space. 
 
+## Deployed Link
+grocal: https://grocal.netlify.app/
+
 - [MVP](#mvp)
 - [Goals](#goals)
 - [Libraries and Dependencies](#libraries-and-dependencies)
@@ -14,13 +17,11 @@
 - [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 
-
 ## MVP
 - Full CRUD
 - Listing produce for sale, Seasons view
 - 3 tables: Users, Crops, Seasons
 - Allow the users to enter how much of a given crop they have for sale
-
 
 ## Goals
 Build out a full-stack app with full CRUD, expand abilities in working on Ruby on Rails and front-end React apps.
