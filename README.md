@@ -6,6 +6,7 @@
 ## Deployed Link
 grocal: https://grocal.netlify.app/
 
+## Index
 - [MVP](#mvp)
 - [Goals](#goals)
 - [Libraries and Dependencies](#libraries-and-dependencies)
