@@ -68,16 +68,17 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| Basic MVP Design                     |    H     |      5hrs      |      5hrs     |     5hrs    |
-| Rails - tables, models, seed data    |   H   |4|||
-| Rails - migrations    |   H   |1|||
-| Front-end api-config    |   H   |2|||
-| Front-end axios requests    |   H   |2|||
-| Front-end log-in/register    |   H   |2|||
-| Front-end produce view    |   H   |1|||
-| Front-end seasonal view    |   H   |1|||
-| Front-end CSS     |   H   |3|||
-| Front-end CSS 2   |   H   |3|||
+| Basic MVP Design                     |   H      |      5hrs      |    5hrs       |     5hrs    |
+| Rails - tables, models, seed data    |   H      |      4hrs      |    3hrs       |    2.5hrs   |
+| Rails - migrations                   |   H      |      1hrs      |    2hrs       |    2hrs     |
+| Front-end api-config                 |   H      |      2hrs      |    3hrs       |    3hrs     |
+| Front-end axios requests             |   H      |      2hrs      |    2hrs       |    1.5hrs   |
+| Front-end log-in/register            |   H      |      2hrs      |    3hrs       |    2.5hrs   |
+| Front-end produce view               |   H      |      1hrs      |    1hrs       |    1hrs     |
+| Front-end seasonal view              |   H      |      1hrs      |    2hrs       |    1.5hrs   |
+| Front-end CSS                        |   H      |      3hrs      |    3hrs       |    3hrs     |
+| Front-end CSS 2                      |   H      |      3hrs      |    3hrs       |    3hrs     |
+| Total Time                           |          |     24hrs      |    30hrs      |    25hrs    |
 
 <br>
 
