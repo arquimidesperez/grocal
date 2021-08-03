@@ -13,22 +13,21 @@
     - [Timeframes](#timeframes)
 - [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
 
 <br>
 
-### MVP
+## MVP
 - Full CRUD
 - Listing produce for sale, Seasons view
 - 3 tables: Users, Crops, Seasons
 - Allow the users to enter how much of a given crop they have for sale
 
-### Goals
+## Goals
 Build out a full-stack app with full CRUD, expand abilities in working on Ruby on Rails and front-end React apps.
 
 <br>
 
-#### Libraries and Dependencies
+### Libraries and Dependencies
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | JavaScript framework for front-end development |
@@ -36,36 +35,36 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 
 <br>
 
-#### Wireframes
+### Wireframes
 <a href='https://www.figma.com/file/eVBHnbdho0O0FrirErYWKk/grocal?node-id=0%3A1' rel="nofollow" target='blank'>Figma Wireframe</a>
 
 <br>
 
-#### Component Tree
+### Component Tree
 
 <a href='https://whimsical.com/grocal-G97Wpuj6Xv6KfTbG9ZSPAP' rel="nofollow" target='blank'>Whimsical Component Tree</a>
 
 <br>
 
-#### ERD Model
+### ERD Model
 
 <a href='https://drive.google.com/file/d/11n--amiR6rYcQT9z_-Kgp2VnnkwcQuYM/view?usp=sharing' rel="nofollow" target='blank'>ERD Model</a>
 
 <br>
 
-#### Project Schedule
+### Project Schedule
 
 | Day        | Deliverable                                                | Status     |
 | ----- | --------------------------------------------------------------- | ---------- |
-| 7/22  | Back-end functionality: Rails (schema, database, models, controllers)  |   |
-| 7/23  | Front-end build out api-config (get, pull, post, delete) |   |
-| 7/24  | Front-end user Authentication, views & components |   |
-| 7/26  | CSS flexbox/grid |   |
-| 7/27  | CSS finishing touches -- testing and last minute fixes |   |
+| 7/22  | Back-end functionality: Rails (schema, database, models, controllers)  | ✅  |
+| 7/23  | Front-end build out api-config (get, pull, post, delete) | ✅  |
+| 7/24  | Front-end user Authentication, views & components | ✅  |
+| 7/26  | CSS flexbox/grid | ✅  |
+| 7/27  | CSS finishing touches -- testing and last minute fixes |  ✅ |
 
 <br>
 
-#### Timeframes
+### Timeframes
 
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
@@ -82,14 +81,57 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 
 <br>
 
-### Post-MVP
-- Calculating average prices for a specific crop
+## Post-MVP
+- Calculating and displaying the average prices for produce that share the same type
 - Purchasing window
 
 <br>
 
-### Code Showcase
+## Code Showcase
+
+ProduceEdit.jsx
+```
+  const [produceFormData, setProduceFormData] = useState({
+    produce_type: "",
+    name: "",
+    variety: "",
+    img_url: "",
+    quantity: "",
+    price: "",
+  });
+  const { produce_type, name, variety, img_url, quantity, price } =
+    produceFormData;
+  const { produceList, handleUpdate, seasonsList } = props;
+  const [seasonId, setSeasonId] = useState();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const prefillFormData = () => {
+      const editingProduce = produceList.find(
+        (produce) => produce.id === Number(id)
+      );
+      setProduceFormData({
+        produce_type: editingProduce?.produce_type,
+        name: editingProduce?.name,
+        variety: editingProduce?.variety,
+        img_url: editingProduce?.img_url,
+        quantity: editingProduce?.quantity,
+        price: editingProduce?.price,
+      });
+    };
+    if (produceList.length) {
+      prefillFormData();
+    }
+    // eslint-disable-next-line
+  }, [produceList]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProduceFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+```
 
 <br>
-
-### Code Issues & Resolutions
