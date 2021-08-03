@@ -5,16 +5,15 @@
 
 - [MVP](#mvp)
 - [Goals](#goals)
-    - [Libraries and Dependencies](#libraries-and-dependencies)
-    - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
-    - [ERD Model](#erd-model)
-    - [Project Schedule](#project-schedule)
-    - [Timeframes](#timeframes)
+- [Libraries and Dependencies](#libraries-and-dependencies)
+- [Wireframes](#wireframes)
+- [Component Tree](#component-tree)
+- [ERD Model](#erd-model)
+- [Project Schedule](#project-schedule)
+- [Timeframes](#timeframes)
 - [Post-MVP](#post-mvp)
 - [Code Showcase](#code-showcase)
 
-<br>
 
 ## MVP
 - Full CRUD
@@ -22,38 +21,31 @@
 - 3 tables: Users, Crops, Seasons
 - Allow the users to enter how much of a given crop they have for sale
 
+
 ## Goals
 Build out a full-stack app with full CRUD, expand abilities in working on Ruby on Rails and front-end React apps.
 
-<br>
 
-### Libraries and Dependencies
+## Libraries and Dependencies
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | JavaScript framework for front-end development |
 |   React Router   | JavaScript package for adding functionality to app, BrowserReactor |
 
-<br>
 
-### Wireframes
+## Wireframes
 <a href='https://www.figma.com/file/eVBHnbdho0O0FrirErYWKk/grocal?node-id=0%3A1' rel="nofollow" target='blank'>Figma Wireframe</a>
 
-<br>
 
-### Component Tree
-
+## Component Tree
 <a href='https://whimsical.com/grocal-G97Wpuj6Xv6KfTbG9ZSPAP' rel="nofollow" target='blank'>Whimsical Component Tree</a>
 
-<br>
 
-### ERD Model
-
+## ERD Model
 <a href='https://drive.google.com/file/d/11n--amiR6rYcQT9z_-Kgp2VnnkwcQuYM/view?usp=sharing' rel="nofollow" target='blank'>ERD Model</a>
 
-<br>
 
-### Project Schedule
-
+## Project Schedule
 | Day        | Deliverable                                                | Status     |
 | ----- | --------------------------------------------------------------- | ---------- |
 | 7/22  | Back-end functionality: Rails (schema, database, models, controllers)  | ✅  |
@@ -62,10 +54,8 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 | 7/26  | CSS flexbox/grid | ✅  |
 | 7/27  | CSS finishing touches -- testing and last minute fixes |  ✅ |
 
-<br>
 
-### Timeframes
-
+## Timeframes
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
 | Basic MVP Design                     |   H      |      5hrs      |    5hrs       |     5hrs    |
@@ -80,16 +70,13 @@ Build out a full-stack app with full CRUD, expand abilities in working on Ruby o
 | Front-end CSS 2                      |   H      |      3hrs      |    3hrs       |    3hrs     |
 | Total Time                           |          |     24hrs      |    30hrs      |    25hrs    |
 
-<br>
 
 ## Post-MVP
 - Calculating and displaying the average prices for produce that share the same type
 - Purchasing window
 
-<br>
 
 ## Code Showcase
-
 ProduceEdit.jsx
 ```
   const [produceFormData, setProduceFormData] = useState({
@@ -134,5 +121,3 @@ ProduceEdit.jsx
     }));
   };
 ```
-
-<br>
